@@ -2,6 +2,7 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 
 const navigation = [
   { name: "About", href: "/about" },
@@ -57,12 +58,11 @@ export default function Home() {
                       {item.name}
                     </a>
                   ))}
-                  <a
-                    href="/mywork"
-                    className="font-medium text-indigo-600 hover:text-indigo-500"
-                  >
-                    My Work
-                  </a>
+                  <Link href="/mywork">
+                    <a className="font-medium text-indigo-600 hover:text-indigo-500">
+                      My Work
+                    </a>
+                  </Link>
                 </div>
               </nav>
             </div>
@@ -130,7 +130,7 @@ export default function Home() {
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Need content for your landing, marketing, blog pages? Look no
-                further. Contact me and let's set up a deal to get you the
+                further. Contact me and let&apos;s set up a deal to get you the
                 business to make your company thrive!
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
@@ -143,12 +143,11 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="/mywork"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-                  >
-                    Work Samples
-                  </a>
+                  <Link href="/mywork">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                      Work Samples
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

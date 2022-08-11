@@ -1,3 +1,4 @@
+import Link from "next/link";
 /* This example requires Tailwind CSS v2.0+ */
 const posts = [
   {
@@ -87,9 +88,9 @@ export default function Example() {
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
                   <p className="text-sm font-medium text-indigo-600">
-                    <a href={post.category.href} className="hover:underline">
-                      {post.category.name}
-                    </a>
+                    <Link href={post.category.href}>
+                      <a className="hover:underline">{post.category.name}</a>
+                    </Link>
                   </p>
                   <a href={post.href} className="block mt-2">
                     <p className="text-xl font-semibold text-gray-900">
